@@ -1,9 +1,11 @@
-sudo apt update < "/dev/null"
-sudo apt install xfce4 xfce4-goodies < "/dev/null"
-sudo apt install tightvncserver < "/dev/null"
-sudo apt install xfonts-base < "/dev/null"
-sudo apt install autocutsel < "/dev/null"
-mv /root/.vnc/xstartup ~/.vnc/xstartup.bak < "/dev/null"
+sudo apt update
+sudo apt install xfce4 xfce4-goodies
+sudo apt install tightvncserver
+sudo apt install xfonts-base
+sudo apt install autocutsel
+vncserver
+vncserver -kill :1
+mv /root/.vnc/xstartup ~/.vnc/xstartup.bak
 cd /root/.vnc/
 cat <<EOF >>xstartup
 #!/bin/bash
